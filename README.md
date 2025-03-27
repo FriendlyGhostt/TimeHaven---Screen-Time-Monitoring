@@ -14,6 +14,10 @@ TimeHaven – Screen Time Monitoring
 ✅ Flexible settings – saves all preferences (notifications, sounds, language, backup, startup) in settings.json
 
 🚀 Installation & Launch:
+⚠️ **Requirements:** TimeHaven requires **.NET 8 Runtime** to run.  
+If you don’t have it installed, you can download it here:  
+[Download .NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
 You can use TimeHaven in one of the following ways:
 
 * Build manually (option to disable test database generation).
@@ -46,6 +50,10 @@ TimeHaven – Мониторинг экранного времени
 ✅ Гибкие настройки – сохранение параметров (уведомления, звуки, язык, бэкап, запуск) в settings.json
 
 🚀 Установка и запуск:
+⚠️ **Требования:** Для работы TimeHaven необходим **.NET 8 Runtime**.  
+Если он не установлен, скачайте его здесь:  
+[Скачать .NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
 Вы можете выбрать один из способов использования TimeHaven:
 
 * Сборка вручную (с возможностью отключить тестовую генерацию баз данных).
