@@ -68,16 +68,31 @@ Kostsov S.V. (FriendlyGhostt)
 
 ===========================================================================
 
-FirstPage:
-![FirstPage TimeHaven](screenshots/timehaven1.png)
-SecondPage:
-![SecondPage TimeHaven](screenshots/timehaven2.png)
-ThirdPage:
-![ThirdPage TimeHaven](screenshots/timehaven3.png)
-FourthPage:
-![FourthPage TimeHaven](screenshots/timehaven4.png)
-Notification:
-![Notification TimeHaven](screenshots/timehaven5.png)
+<p align="center">
+    <b>FirstPage:</b><br>
+    <img src="screenshots/timehaven1.png" alt="FirstPage TimeHaven">
+</p>
+
+<p align="center">
+    <b>SecondPage:</b><br>
+    <img src="screenshots/timehaven2.png" alt="SecondPage TimeHaven">
+</p>
+
+<p align="center">
+    <b>ThirdPage:</b><br>
+    <img src="screenshots/timehaven3.png" alt="ThirdPage TimeHaven">
+</p>
+
+<p align="center">
+    <b>FourthPage:</b><br>
+    <img src="screenshots/timehaven4.png" alt="FourthPage TimeHaven">
+</p>
+
+<p align="center">
+    <b>Notification:</b><br>
+    <img src="screenshots/timehaven5.png" alt="Notification TimeHaven">
+</p>
+
 
 
 ===========================================================================
