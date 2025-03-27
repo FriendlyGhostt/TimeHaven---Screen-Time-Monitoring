@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Rules21">20-20-20 means that you need to take a break every 20 minutes,</sys:String>
+    <sys:String x:Key="Rules22">for 20 seconds, and look at distant objects at</sys:String>
+    <sys:String x:Key="Rules23">least 20 feet (6 meters) away to relieve eye strain.</sys:String>
+
+    <!-- Main -->
+    <sys:String x:Key="StatisticsButton">Statistics</sys:String>
+    <sys:String x:Key="NotificationButton">Notification</sys:String>
+    <sys:String x:Key="SettingButton">Settings</sys:String>
+
+    <!-- Page2 -->
+    <sys:String x:Key="TodayButton">Today</sys:String>
+    <sys:String x:Key="Last7daysButton">Last 7 days</sys:String>
+    <sys:String x:Key="Last30daysButton">Last 30 days</sys:String>
+    <sys:String x:Key="AlltimeButton">All time</sys:String>
+
+    <!-- Page3 -->
+    <sys:String x:Key="Rules202020">Rule 20-20-20</sys:String>
+    <sys:String x:Key="Rule21">20-20-20 means that you need to take a break every 20 minutes, for 20 seconds,</sys:String>
+    <sys:String x:Key="Rule22">and look at distant objects at least 20 feet (6 meters) away</sys:String>
+    <sys:String x:Key="Rule23">to relieve eye strain. :|</sys:String>
+
+    <sys:String x:Key="Pg3Notification">Notifications</sys:String>
+    <sys:String x:Key="Pg3NotificationSound">Sound alert</sys:String>
+    <sys:String x:Key="Pg3NotificationText">Text alert</sys:String>
+    <sys:String x:Key="Pg3Add">Add</sys:String>
+    <sys:String x:Key="Pg3OpenFolder">Open folder</sys:String>
+    <sys:String x:Key="Pg3Interval">Interval [min]:</sys:String>
+    <sys:String x:Key="Pg3Exclusive">Exclusive notifications:</sys:String>
+    <sys:String x:Key="Pg3Clear">Clear</sys:String>
+    <sys:String x:Key="Pg3Default">Default</sys:String>
+    <sys:String x:Key="Pg3Reminder">Set reminder</sys:String>
+
+    <!-- Комбо-бокс для интервалов -->
+    <sys:String x:Key="Interval_1">1 min</sys:String>
+    <sys:String x:Key="Interval_5">5 min</sys:String>
+    <sys:String x:Key="Interval_10">10 min</sys:String>
+    <sys:String x:Key="Interval_15">15 min</sys:String>
+    <sys:String x:Key="Interval_20">20 min</sys:String>
+    <sys:String x:Key="Interval_30">30 min</sys:String>
+    <sys:String x:Key="Interval_45">45 min</sys:String>
+    <sys:String x:Key="Interval_60">60 min</sys:String>
+    <sys:String x:Key="Interval_90">90 min</sys:String>
+    <sys:String x:Key="Interval_120">120 min</sys:String>
+
+
+    <!-- Page4 -->
+    <sys:String x:Key="PetProject_Description1">
+        This program is a pet project of a young developer.
+        Please don't judge too harshly for the code style, use of singletons for databases, or ChatGPT reliance,
+    </sys:String>
+
+    <sys:String x:Key="PetProject_Description2">
+        maybe some incorrect logic? 
+        The first project with functionality beyond simple notes :3 ⓒ FfriendlyGghostt
+    </sys:String>
+
+    <sys:String x:Key="ButtonRezervCopy">Backup</sys:String>
+    <sys:String x:Key="ButtonOffRezervCopy">Disable Backup</sys:String>
+    <sys:String x:Key="ButtonImport">Import Data</sys:String>
+    <sys:String x:Key="ButtonReset">Reset Data</sys:String>
+    <sys:String x:Key="ChangeWindowButton">Run on Windows</sys:String>
+    
+    <sys:String x:Key="DescriptionButtonRezervCopy">
+        This feature will automatically create a backup once a day.
+        To disable it, use the button below.
+    </sys:String>
+
+    <!-- Notification -->
+    <sys:String x:Key="NotyOk">Ok</sys:String>
+    <sys:String x:Key="NotyPause">Pause</sys:String>
+
+</ResourceDictionary>

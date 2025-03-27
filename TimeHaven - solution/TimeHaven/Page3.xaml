@@ -1,0 +1,306 @@
+﻿<UserControl x:Class="TimeHaven.Page3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+             Background="Transparent"
+             Height="680" Width="1100">
+
+    <Grid MouseDown="Grid_MouseDown" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <!-- Текст "Правило 20-20-20" -->
+        <TextBlock Text="{DynamicResource Rules202020}"
+           Foreground="Gray"
+           ToolTipService.ShowOnDisabled="True"
+           MouseDown="ShowTooltip"
+           TextDecorations="Underline"
+           Margin="0,30,30,0"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   FontSize="16">
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    <TextBlock>
+                <Run Text="{DynamicResource Rules21}"/>
+                <LineBreak/>
+                <Run Text="{DynamicResource Rules22}"/>
+                <LineBreak/>
+                <Run Text="{DynamicResource Rules23}"/>
+                    </TextBlock>
+                </ToolTip>
+            </TextBlock.ToolTip>
+</TextBlock>
+
+
+        <StackPanel Margin="125, 60, 125, 0">
+            <!-- Уведомления (основной переключатель) -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Border x:Name="toggleSwitchNotification"
+                Width="60" Height="30"
+                Background="DodgerBlue"
+                CornerRadius="10"
+                MouseDown="ToggleSwitchNotification_Click">
+                    <Grid>
+                        <!-- Ползунок -->
+                        <Border x:Name="toggleKnobNotification"
+                        Width="26" Height="26"
+                        Background="White"
+                        CornerRadius="7"
+                        HorizontalAlignment="Right"
+                        Margin="2"/>
+                    </Grid>
+                </Border>
+                <!-- Текст "Уведомления" -->
+                <TextBlock Text="{DynamicResource Pg3Notification}"
+                   FontSize="16"
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   Margin="10,0,10,0"
+                   FontWeight="Bold"/>
+            </StackPanel>
+
+
+
+
+            <StackPanel x:Name="notifyPanel" Orientation="Horizontal" 
+    VerticalAlignment="Center" Margin="0, 20, 0, 0" IsEnabled="True">
+                <StackPanel Orientation="Horizontal">
+                    <!-- Фон тумблера (Звуковое оповещение) -->
+                    <Border x:Name="toggleSwitchSound"
+            Width="60" Height="30"
+            Background="DodgerBlue"
+            CornerRadius="10"
+            MouseDown="ToggleSwitchSound_Click">
+                        <Grid>
+                            <!-- Ползунок -->
+                            <Border x:Name="toggleKnobSound"
+                    Width="26" Height="26"
+                    Background="White"
+                    CornerRadius="7"
+                    HorizontalAlignment="Right"
+                    Margin="2"/>
+                        </Grid>
+                    </Border>
+                    <!-- Текст "Звуковое оповещение" -->
+                    <TextBlock Text="{DynamicResource Pg3NotificationSound}"
+            FontSize="16"
+            Foreground="White"
+            VerticalAlignment="Center"
+            Margin="10,0,10,0"
+            FontWeight="Bold"/>
+                </StackPanel>
+
+
+                <StackPanel x:Name ="StackPanelToggle" Orientation="Horizontal" Margin="140,0,0,0">
+                    <Border x:Name="toggleSwitchText"
+            Width="60" Height="30"
+            Background="DodgerBlue"
+            CornerRadius="10"
+            MouseDown="ToggleSwitchText_Click">
+                        <Grid>
+                            <Border x:Name="toggleKnobText"
+                    Width="26" Height="26"
+                    Background="White"
+                    CornerRadius="7"
+                    HorizontalAlignment="Right"
+                    Margin="2"/>
+                        </Grid>
+                    </Border>
+                    <TextBlock Text="{DynamicResource Pg3NotificationText}"
+                        FontSize="16"
+                        Foreground="White"
+                        VerticalAlignment="Center"
+                        Margin="10,0,10,0"
+                        FontWeight="Bold"/>
+
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical" Margin="0, 20, 0, 0" HorizontalAlignment="Left">
+                <ComboBox x:Name="SoundBox" SelectionChanged="SoundBox_SelectionChanged" ItemsSource="{Binding SoundFiles}" Width="255" Height="27" Padding="5" IsEnabled="True"/>
+                <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+
+
+                    <Button x:Name="AddSoundButton" Content="{DynamicResource Pg3Add}" Width="125" Height="27" Margin="0,0,5,0"  Click="AddSound_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="ButtonBackground"
+                    Background="WhiteSmoke"
+                    BorderBrush="DarkGray"
+                    BorderThickness="0"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  RecognizesAccessKey="True"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="ButtonBackground" Property="Background" Value="DodgerBlue"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter TargetName="ButtonBackground" Property="Background" Value="WhiteSmoke"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button x:Name="OpenSoundFolderButton" Content="{DynamicResource Pg3OpenFolder}" Width="124" Height="27"  Click="OpenSoundFolder_Click" Margin="1,0,0,0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="ButtonBackground"
+                                Background="WhiteSmoke"
+                                BorderBrush="DarkGray"
+                                BorderThickness="0"
+                                Height="{TemplateBinding Height}"
+                                Width="{TemplateBinding Width}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="ButtonBackground" Property="Background" Value="DodgerBlue"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter TargetName="ButtonBackground" Property="Background" Value="WhiteSmoke"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock x:Name="TextComboTime" Text="{DynamicResource Pg3Interval}"
+                FontSize="16"
+                Foreground="White"
+                VerticalAlignment="Center"
+                Margin="0,20,0,0"
+                FontWeight="Bold"/>
+
+                <ComboBox x:Name="comboBoxTime"
+                            Width="110"
+                            Height="27"
+                            IsEditable="True"
+                            IsReadOnly="False"
+                            IsTextSearchCaseSensitive="False"
+                            Text="{DynamicResource Interval_20}"
+                          Padding="5"
+                          Margin="-450,-25,0,0"
+                          KeyDown="ComboBoxTime_KeyDown"
+                          SelectionChanged="ComboBoxTime_SelectionChanged">
+                    <ComboBoxItem Content="{DynamicResource Interval_1}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_5}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_10}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_15}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_20}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_30}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_45}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_60}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_90}" />
+                    <ComboBoxItem Content="{DynamicResource Interval_120}" />
+                </ComboBox>
+            </StackPanel>
+
+
+            <StackPanel Margin="0, 30, 0, 0">
+                <TextBlock Text="{DynamicResource Pg3Exclusive}"
+                    FontSize="16"
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    Margin="0,20,0,0"
+                    FontWeight="Bold"/>
+                <DatePicker x:Name="datePicker" Width="250" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                <toolkit:TimePicker x:Name="timePicker" Width="250" HorizontalAlignment="Left" Margin="0,10,0,0" TextAlignment="Center" 
+                                    />
+
+                <Button Content="{DynamicResource Pg3Reminder}" Click="SetReminder_Click" 
+                        Margin="0,10,0,0" 
+                        Width="250" Height="27" 
+                        HorizontalAlignment="Left"
+                        Foreground="White"/>
+
+                <ListBox x:Name="reminderList" Width="250" Height="172" HorizontalAlignment="Left" Margin="0,10,0,0"
+                         Background="#223366CC"
+                         Foreground="White"
+                         BorderBrush="Transparent"
+                         PreviewKeyDown="ListBoxReminders_PreviewKeyDown"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid>
+            <TextBox x:Name="textNotificationBox" Height="426"
+                Background="#223366CC"
+                Foreground="White"
+                BorderBrush="Transparent"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Margin="430,159,136,0"
+                FontSize="16"
+                Padding="10" TextChanged="textNotificationBox_TextChanged"
+                KeyDown="TextBox_KeyDown"/>
+
+            <Button Content="{DynamicResource Pg3Clear}" Width="260" Height="27" Margin="20,600,0,0"  Click="ClearText_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBackground"
+                        Background="WhiteSmoke"
+                        BorderBrush="DarkGray"
+                        BorderThickness="0"
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBackground" Property="Background" Value="DodgerBlue"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="ButtonBackground" Property="Background" Value="WhiteSmoke"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="{DynamicResource Pg3Default}" Width="260" Height="27" Margin="570,600,0,0"  Click="DefaultText_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBackground"
+            Background="WhiteSmoke"
+            BorderBrush="DarkGray"
+            BorderThickness="0"
+            Height="{TemplateBinding Height}"
+            Width="{TemplateBinding Width}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBackground" Property="Background" Value="DodgerBlue"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="ButtonBackground" Property="Background" Value="WhiteSmoke"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+        </Grid>
+
+    </Grid>
+</UserControl>

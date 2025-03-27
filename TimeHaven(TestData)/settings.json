@@ -1,0 +1,21 @@
+{
+  "Language": "en-US",
+  "StepTime": "5 мин",
+  "StepTimeMinutes": 5,
+  "SwitchNotification": true,
+  "SwitchSound": true,
+  "SwitchText": true,
+  "RunOnStartup": false,
+  "BackupEnabled": false,
+  "BackupDirectory": "",
+  "LastBackupTime": "0001-01-01T00:00:00",
+  "SelectedAudio": "bottle-205353.mp3",
+  "Notifications": [
+    "Перегрев процессора! Твой мозг работает на максимальных оборотах...",
+    "Графика размывается! Похоже, твоё зрение устало от пикселей...",
+    "Уведомление: Уведомляю :)",
+    "Ошибка рендеринга! Глаза устали обрабатывать столько информации. Отключись на пару минут: поморгай, разомни шею и взгляни в сторону природы.",
+    "Пора выглянуть в окно?"
+  ],
+  "Reminders": []
+}

@@ -1,0 +1,91 @@
+﻿<Window x:Class="TimeHaven.Notification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Notification" 
+        Width="350"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        Loaded="Window_Loaded"
+        SizeToContent="Height"
+        Icon="pack://siteoforigin:,,,/resources/Icon.ico">
+
+    <Window.Resources>
+        <Style x:Key="TransparentButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#66FFFFFF"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" Color="White" Opacity="0.3" BlurRadius="5"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#99FFFFFF"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect ShadowDepth="0" Color="White" Opacity="0.5" BlurRadius="10"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#CCFFFFFF"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect ShadowDepth="0" Color="White" Opacity="0.7" BlurRadius="15"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Border Background="#CC000000" CornerRadius="15" Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Текст адаптируется по высоте -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Кнопки прижаты вниз -->
+                </Grid.RowDefinitions>
+
+                <!-- Текст уведомления -->
+                <TextBlock Name="NotificationText" 
+                           Foreground="White" 
+                           FontSize="14" 
+                           TextWrapping="Wrap"
+                           Margin="0,5,0,5"
+                           TextAlignment="Center"
+                           Text="Графика размывается! Похоже, твоё зрение устало от пикселей..."
+                           Grid.Row="0"/>
+
+                <!-- Блок кнопок -->
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center"
+                            Grid.Row="1"
+                            VerticalAlignment="Center">
+                    <Border Background="#66FFFFFF" CornerRadius="5" Margin="5">
+                        <Button Content="OK" 
+                                Width="160" Height="27" 
+                                Click="CloseNotification"
+                                Style="{StaticResource TransparentButtonStyle}"/>
+                    </Border>
+
+                    <Border Background="#66FFFFFF" CornerRadius="5" Margin="5">
+                        <Button Content="Pause" 
+                                Width="160" Height="27" 
+                                Click="PauseTimer"
+                                Style="{StaticResource TransparentButtonStyle}"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

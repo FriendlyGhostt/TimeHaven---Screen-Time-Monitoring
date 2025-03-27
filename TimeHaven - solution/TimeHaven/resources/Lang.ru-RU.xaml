@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Основные кнопки -->
+    <sys:String x:Key="StatisticsButton">Статистика</sys:String>
+    <sys:String x:Key="NotificationButton">Уведомления</sys:String>
+    <sys:String x:Key="SettingButton">Настройки</sys:String>
+
+    <!-- Статистика (Page2) -->
+    <sys:String x:Key="TodayButton">За сегодня</sys:String>
+    <sys:String x:Key="Last7daysButton">За 7 дней</sys:String>
+    <sys:String x:Key="Last30daysButton">За 30 дней</sys:String>
+    <sys:String x:Key="AlltimeButton">Всё время</sys:String>
+
+    <!-- Правило 20-20-20 (Page3) -->
+    <sys:String x:Key="Rules202020">Правило 20-20-20</sys:String>
+
+    <!-- Новые строки для правила 20-20-20 -->
+    <sys:String x:Key="Rules21">20−20−20 означает, что вам нужно делать перерыв после каждых 20 минут,</sys:String>
+    <sys:String x:Key="Rules22">на 20 секунд и смотреть на дальние объекты на расстоянии не менее 20 футов (6 метров),</sys:String>
+    <sys:String x:Key="Rules23">чтобы разгрузить фокусировку глаз. :|</sys:String>
+
+    <!-- Уведомления (Page3) -->
+    <sys:String x:Key="Pg3Notification">Уведомления</sys:String>
+    <sys:String x:Key="Pg3NotificationSound">Звуковое оповещение</sys:String>
+    <sys:String x:Key="Pg3NotificationText">Текстовое оповещение</sys:String>
+    <sys:String x:Key="Pg3Add">Добавить</sys:String>
+    <sys:String x:Key="Pg3OpenFolder">Открыть папку</sys:String>
+    <sys:String x:Key="Pg3Interval">Интервал [мин]:</sys:String>
+    <sys:String x:Key="Pg3Exclusive">Эксклюзивные уведомления:</sys:String>
+    <sys:String x:Key="Pg3Clear">Очистить</sys:String>
+    <sys:String x:Key="Pg3Default">Базовые</sys:String>
+    <sys:String x:Key="Pg3Reminder">Установить напоминание</sys:String>
+
+    <!-- Комбо-бокс для интервалов -->
+    <sys:String x:Key="Interval_1">1 мин</sys:String>
+    <sys:String x:Key="Interval_5">5 мин</sys:String>
+    <sys:String x:Key="Interval_10">10 мин</sys:String>
+    <sys:String x:Key="Interval_15">15 мин</sys:String>
+    <sys:String x:Key="Interval_20">20 мин</sys:String>
+    <sys:String x:Key="Interval_30">30 мин</sys:String>
+    <sys:String x:Key="Interval_45">45 мин</sys:String>
+    <sys:String x:Key="Interval_60">60 мин</sys:String>
+    <sys:String x:Key="Interval_90">90 мин</sys:String>
+    <sys:String x:Key="Interval_120">120 мин</sys:String>
+
+    <!-- Описание проекта (Page4) -->
+    <sys:String x:Key="PetProject_Description1">
+        Данная программа является Pet-проектом юного разработчика.
+        Не судите строго за написание кода, использование синглтонов для баз, ненавистного ChatGPT,
+    </sys:String>
+
+    <sys:String x:Key="PetProject_Description2">
+        возможно, не совсем правильную логику?
+        Первый проект с функциональностью больше, чем у обычных заметок. :3 ⓒ FfriendlyGghostt
+    </sys:String>
+
+    <!-- Настройки резервного копирования (Page4) -->
+    <sys:String x:Key="ButtonRezervCopy">Резервное копирование</sys:String>
+    <sys:String x:Key="ButtonOffRezervCopy">Выключить резервное копирование</sys:String>
+    <sys:String x:Key="ButtonImport">Импорт данных</sys:String>
+    <sys:String x:Key="ButtonReset">Сбросить данные</sys:String>
+    <sys:String x:Key="ChangeWindowButton">Запуск с Windows</sys:String>
+    
+    <sys:String x:Key="DescriptionButtonRezervCopy">
+        Данная функция будет автоматически создавать резервное сохранение
+        раз в день. Чтобы отключить, используйте кнопку ниже.
+    </sys:String>
+    
+    <!-- Notification -->
+    <sys:String x:Key="NotyOk">Ок</sys:String>
+    <sys:String x:Key="NotyPause">Пауза</sys:String>
+    
+</ResourceDictionary>
